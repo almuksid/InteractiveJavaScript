@@ -1,0 +1,7 @@
+.container {
+  height: 160px;
+  text-align: center;
+  background-color: rgb(4, 52, 1);
+  color: rgb(255, 255, 255);
+  padding: 30px;
+}

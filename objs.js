@@ -1,16 +1,11 @@
-// Challenge 1
-// Make a Calculator
-let num1 = prompt("Enter Num1");
-let op = prompt("Enter Operator +, -, *, /");
-let num2 = prompt("Enter Num2");
+// Challenge 2
+// Guessing game
+let num = prompt("Guess the number 1 to 10");
+let randomNum = Math.floor(Math.random() * 10);
+console.log(randomNum);
 
-if(op == '+'){
-    console.log(Number(num1) + Number(num2) )
-}else if(op == '-'){
-    console.log(Number(num1) - Number(num2) )
-}else if(op == '*'){
-    console.log(Number(num1) * Number(num2) )
-}else if(op == '/'){
-    console.log(Number(num1) / Number(num2) )
+if(num == randomNum){
+    console.log("You win");
+}else{
+    console.log("You wrong");
 }
-

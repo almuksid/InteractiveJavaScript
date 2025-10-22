@@ -74,7 +74,7 @@ const fName = characters.map(el => {
 });
 console.log(fName);
 
-// Split Method
+// Split Methods
 const name = "Al Muksid";
 console.log(name.split(" "));
 

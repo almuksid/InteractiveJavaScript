@@ -1,6 +1,3 @@
-# JavaScript Array Map Examples
-
-```js
 // Array Map
 const arr = [1, 2, 3];
 const newArra = [];
@@ -80,4 +77,5 @@ console.log(fName);
 // Split Method
 const name = "Al Muksid";
 console.log(name.split(" "));
-// ------------------------------------
+
+

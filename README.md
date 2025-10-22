@@ -324,3 +324,37 @@ console.log(shortThen200);
 const isMaleChar = characters.every(el => el.gender == 'male');
 console.log(isMaleChar);
 ```
+---
+---
+
+# Array Some Method
+
+## Is there at least one male character?
+```js
+const oneMaleChar = characters.some(el => el.gender == 'male');
+console.log(oneMaleChar);
+```
+---
+
+## Is there at least one character with blue eyes?
+```js
+const oneBlueEyes = characters.some(el => el.eye_color == 'blue');
+console.log(oneBlueEyes);
+```
+---
+
+// Is there at least one character taller than 200?
+
+```js
+const oneTaller200 = characters.some(el => el.height > 200);
+console.log(oneTaller200);
+```
+---
+
+// Is there at least one character that has mass less than 50?
+```js
+const massLessThen50 = characters.some(el => el.mass < 50);
+console.log(massLessThen50);
+```
+---
+---

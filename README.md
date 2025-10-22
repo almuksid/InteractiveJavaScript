@@ -1,5 +1,6 @@
 # JavaScript Array Map Examples
 
+```js
 ## Push method
 const arr = [1, 2, 3];
 const newArra = [];

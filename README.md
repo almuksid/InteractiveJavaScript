@@ -8,10 +8,13 @@ for(el of arr){
     newArra.push(el);
 }
 console.log(newArra);
+```markdown
 
 ---
 
 **Array Map**
+
+```js
 
 const newArr = arr.map(function(el){
     return el;

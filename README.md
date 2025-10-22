@@ -8,7 +8,7 @@ for(el of arr){
     newArra.push(el);
 }
 console.log(newArra);
-```markdown
+```
 
 ---
 

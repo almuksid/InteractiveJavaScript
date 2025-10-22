@@ -1,7 +1,7 @@
 # JavaScript Array Map Examples
 
-```js
 ## Push method
+```js
 const arr = [1, 2, 3];
 const newArra = [];
 for(el of arr){
@@ -27,16 +27,18 @@ const newArr1 = arr.map((el) => {
     return el;
 })
 console.log(newArr1);
-
+```
 ---
 
-## Single line 
+## Single line
 
+```js
 const newArr2 = arr.map(el => el * 2);
 console.log(newArr2);
-
+```
 ---
-
+## Problem Solving
+```js
 const characters = [
     {
         name: 'Luke Skywalker',
@@ -67,23 +69,26 @@ const characters = [
         gender: 'male',
     },
 ];
-
+```
 ---
 
 ## Get an array of all names
+```js
 const allNames = characters.map(el => el.name);
 console.log(allNames);
-
+```
 ---
 
 ## Get an array of all heights
-
+```js
 const allHeight = characters.map(el => el.height);
 console.log(allHeight);
-
+```
 ---
 
 ## Get an array of objects with just name and height properties
+
+```js
 const nameHeight = characters.map(el => {
     return{
         name: el.name,
@@ -91,33 +96,39 @@ const nameHeight = characters.map(el => {
     }
 });
 console.log(nameHeight);
-
+```
 ---
 
 ## Get an array of all first names
+```js
 // const fName = characters.map(el => el.name.split(" ")[0]); // Single Line
 const fName = characters.map(el => {
     return el.name.split(" ")[0];
 });
 console.log(fName);
-
+```
+---
 ---
 
-// Split Method
+# Split Method
+```js
 const name = "Al Muksid";
 console.log(name.split(" "));
-// ------------------------------------
-
+```
 ---
 
+
+## for each function 
+```js
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-<!-- for each function -->
-arr.forEach(function (el, ind) { <!--method -->
+arr.forEach(function (el, ind) { //method
   console.log(el, ind);
 });
-<!-- Desc:create for each function - Function call as a parameter - then create new prametter(el) inside function- # This function is treated as a method. -->
-
+```
+### Desc:create for each function - Function call as a parameter - then create new prametter(el) inside function- # This function is treated as a method. 
+```js
 arr.forEach((el, ind) => console.log(el, ind)); // # el- element[arr value] # ind- index[index number]
-
-// ------------------------------------
+```
+---
+---

@@ -1,15 +1,18 @@
-# Array Method
+# Array Methods
 
-**Array Map - array**
-**Array Filter - array**
-**Array Sort**
-**Array Every - boolian**
-**Array Some**
-**Array Reduce**
+| No | Method Name     | Return Type     |
+|----|------------------|-----------------|
+| 1  | Array Map        | array           |
+| 2  | Array Filter     | array           |
+| 3  | Array Every      | boolean         |
+| 4  | Array Some       | boolean         |
+| 5  | Array Sort       | array           |
+| 6  | Array Reduce     | single value    |
+
 
 ---
 
-# JavaScript Array Map Examples
+# 1. JavaScript Array Map Examples
 
 ## Push method
 ```js
@@ -121,13 +124,11 @@ console.log(fName);
 ---
 ---
 
-# Split Method
+## Split Method
 ```js
 const name = "Al Muksid";
 console.log(name.split(" "));
 ```
----
-
 
 ## for each function 
 ```js
@@ -144,7 +145,7 @@ arr.forEach((el, ind) => console.log(el, ind)); // # el- element[arr value] # in
 ---
 ---
 
-# Filter Array
+# 2. Filter Array
 
 ```js
 
@@ -244,7 +245,7 @@ console.log(femaleChar);
 ---
 ---
 
-# Array Every Method
+# 3. Array Every Method
 
 ```js
 const arr = [2, 4, 6, 8 ];
@@ -338,7 +339,7 @@ console.log(isMaleChar);
 ---
 ---
 
-# Array Some Method
+# 4. Array Some Method
 
 ## Is there at least one male character?
 ```js
@@ -370,7 +371,7 @@ console.log(massLessThen50);
 ---
 ---
 
-# Sort Method
+# 5. Sort Method
 ```js
 const num = [1, 5, 15, 3, 4, 9, 2, 7];
 const sortNum = num.sort();

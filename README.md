@@ -1,3 +1,14 @@
+# Array Method
+
+**Array Map - array**
+**Array Filter - array**
+**Array Sort**
+**Array Every - boolian**
+**Array Some**
+**Array Reduce**
+
+---
+
 # JavaScript Array Map Examples
 
 ## Push method
@@ -233,7 +244,7 @@ console.log(femaleChar);
 ---
 ---
 
-# Array Evenly Method
+# Array Every Method
 
 ```js
 const arr = [2, 4, 6, 8 ];
@@ -358,3 +369,38 @@ console.log(massLessThen50);
 ```
 ---
 ---
+
+# Sort Method
+```js
+const num = [1, 5, 15, 3, 4, 9, 2, 7];
+const sortNum = num.sort();
+console.log(sortNum);
+
+const sortNumber = num.sort((a, b) => {
+    return b - a;
+})
+console.log(sortNumber); 
+```
+
+## Problem Solving
+
+## Sort by name
+```js
+const sortName = characters.sort((a, b) => a.name.localeCompare(b.name));
+console.log(sortName);
+```
+## Sort by mass
+```js
+const sortMass = characters.sort((a, b) => a.mass - b.mass);
+console.log(sortMass);
+```
+## Sort by height
+```js
+const sortHeight = characters.sort((a, b) => a.height - b.height);
+console.log(sortHeight);
+```
+## Sort by gender
+```js
+const sortGender = characters.sort((a, b) => a.gender.localeCompare(b.gender));
+console.log(sortGender);
+```

@@ -1,20 +1,44 @@
-# Array Methods
+# 📘 JavaScript Array Methods
 
-| No | Method Name     | Return Type     |
-|----|------------------|-----------------|
-| 1  | Array Map        | array           |
-| 2  | Array Filter     | array           |
-| 3  | Array Every      | boolean         |
-| 4  | Array Some       | boolean         |
-| 5  | Array Sort       | array           |
-| 6  | Array Reduce     | single value    |
-
+| No | Method Name    | Return Type  | Callback Parameters                            | Method Parameters |
+|----|----------------|---------------|------------------------------------------------|-------------------|
+| 1  | **Array Map**      | array         | element, index, arrayInstance                  | callbackFn        |
+| 2  | **Array Filter**   | array         | element, index, arrayInstance                  | callbackFn        |
+| 3  | **Array Every**    | boolean       | element, index, arrayInstance                  | callbackFn        |
+| 4  | **Array Some**     | boolean       | element, index, arrayInstance                  | callbackFn        |
+| 5  | **Array Sort**     | array         | elementA, elementB                             | compareFn         |
+| 6  | **Array Reduce**   | single value  | accumulator, currentValue, currentIndex, array | callbackFn, initialValue |
 
 ---
 
-# 1. JavaScript Array Map Examples
+## 🧩 Callback Parameter Explanation
 
-## Push method
+| Parameter | Description |
+|------------|-------------|
+| **element** | Current item/value in the array. |
+| **index** | The index (starting from 0) of the current element. |
+| **arrayInstance** | The original array that the method was called on. |
+| **elementA, elementB** | Used in `sort()` to compare two values. |
+| **accumulator** | (Used in `reduce`) The accumulated value from previous iterations. |
+| **currentValue** | (Used in `reduce`) The current element being processed. |
+| **currentIndex** | (Used in `reduce`) The index of the current element. |
+| **array** | (Used in `reduce`) The original array being reduced. |
+
+---
+
+## 🧠 Method Parameter Explanation
+
+| Parameter | Description |
+|------------|-------------|
+| **callbackFn** | The function that runs for each element in the array. |
+| **compareFn** | (Used in `sort`) Function that defines how two values are compared. |
+| **initialValue** | (Used in `reduce`) The starting value for the accumulator. |
+
+---
+
+# 1. Array: Map Method
+
+## Push Method
 ```js
 const arr = [1, 2, 3];
 const newArra = [];
@@ -44,14 +68,14 @@ console.log(newArr1);
 ```
 ---
 
-## Single line
+## Map: Single line
 
 ```js
 const newArr2 = arr.map(el => el * 2);
 console.log(newArr2);
 ```
 ---
-## Problem Solving
+## Map: Problem Solving
 ```js
 const characters = [
     {
@@ -86,21 +110,21 @@ const characters = [
 ```
 ---
 
-## Get an array of all names
+## Map: Get an array of all names
 ```js
 const allNames = characters.map(el => el.name);
 console.log(allNames);
 ```
 ---
 
-## Get an array of all heights
+## Map: Get an array of all heights
 ```js
 const allHeight = characters.map(el => el.height);
 console.log(allHeight);
 ```
 ---
 
-## Get an array of objects with just name and height properties
+## Map: Get an array of objects with just name and height properties
 
 ```js
 const nameHeight = characters.map(el => {
@@ -113,7 +137,7 @@ console.log(nameHeight);
 ```
 ---
 
-## Get an array of all first names
+## Map: Get an array of all first names
 ```js
 // const fName = characters.map(el => el.name.split(" ")[0]); // Single Line
 const fName = characters.map(el => {
@@ -145,10 +169,10 @@ arr.forEach((el, ind) => console.log(el, ind)); // # el- element[arr value] # in
 ---
 ---
 
-# 2. Filter Array
+# 2. Array: Filter Method
 
+**Filter Method**
 ```js
-
 const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const newNum = [];
 for (el of num){
@@ -171,7 +195,7 @@ console.log(newNum1);
 ```
 ---
 
-## Problem Solving
+## Filter: Problem Solving
 
 ```js
 const characters = [
@@ -208,7 +232,7 @@ const characters = [
 ```
 ---
 
-## Get characters with mass greater than 100
+## Filter: Get characters with mass greater than 100
 
 ```js
 const gretherThen100 = characters.filter(el => el.mass > 100);
@@ -216,7 +240,7 @@ console.log(gretherThen100);
 ```
 ---
 
-## Get characters with height less than 200
+## Filter: Get characters with height less than 200
 
 ```js
 const lessThen200 = characters.filter(function(el){
@@ -226,7 +250,7 @@ console.log(lessThen200);
 ```
 ---
 
-## Get all male characters
+## Filter: Get all male characters
 
 ```js
 const maleChar = characters.filter((el) =>{
@@ -236,7 +260,7 @@ console.log(maleChar);
 ```
 ---
 
-## Get all female characters
+## Filter: Get all female characters
 ```js
 const femaleChar = characters.filter(el => el.gender !== 'male');
 console.log(femaleChar);
@@ -245,7 +269,7 @@ console.log(femaleChar);
 ---
 ---
 
-# 3. Array Every Method
+# 3. Array: Every Method
 
 ```js
 const arr = [2, 4, 6, 8 ];
@@ -262,7 +286,7 @@ console.log(isEven);
 ```
 ---
 
-## Array every method
+## Every Method
 
 ```js
 const isEven1 = arr.every(el => el % 2 == 0 );
@@ -270,7 +294,7 @@ console.log(isEven1);
 ```
 ---
 
-## Problem Solving
+## Every: Problem Solving
 
 ```js
 const characters = [
@@ -306,7 +330,7 @@ const characters = [
 ```
 ---
 
-## Does every character have blue eyes?
+## Every: Does every character have blue eyes?
 ```js
 
 const checkBlueEyes = characters.every(el => el.eye_color == 'blue');
@@ -314,7 +338,7 @@ console.log(checkBlueEyes);
 ```
 ---
 
-## Does every character have mass more than 40?
+## Every: Does every character have mass more than 40?
 
 ```js
 const checkMassMoreThen40 = characters.every(el => el.mass > 40);
@@ -322,7 +346,7 @@ console.log(checkMassMoreThen40);
 ```
 ---
 
-## Is every character shorter than 200?
+## Every: Is every character shorter than 200?
 
 ```js
 const shortThen200 = characters.every(el => el.height < 200);
@@ -330,7 +354,7 @@ console.log(shortThen200);
 ```
 ---
 
-## Is every character male?
+## Every: Is every character male?
 
 ```js
 const isMaleChar = characters.every(el => el.gender == 'male');
@@ -339,23 +363,23 @@ console.log(isMaleChar);
 ---
 ---
 
-# 4. Array Some Method
+# 4. Array: Some Method
 
-## Is there at least one male character?
+## Some: Is there at least one male character?
 ```js
 const oneMaleChar = characters.some(el => el.gender == 'male');
 console.log(oneMaleChar);
 ```
 ---
 
-## Is there at least one character with blue eyes?
+## Some: Is there at least one character with blue eyes?
 ```js
 const oneBlueEyes = characters.some(el => el.eye_color == 'blue');
 console.log(oneBlueEyes);
 ```
 ---
 
-// Is there at least one character taller than 200?
+## Some: Is there at least one character taller than 200?
 
 ```js
 const oneTaller200 = characters.some(el => el.height > 200);
@@ -363,7 +387,7 @@ console.log(oneTaller200);
 ```
 ---
 
-// Is there at least one character that has mass less than 50?
+## Some: Is there at least one character that has mass less than 50?
 ```js
 const massLessThen50 = characters.some(el => el.mass < 50);
 console.log(massLessThen50);
@@ -371,7 +395,7 @@ console.log(massLessThen50);
 ---
 ---
 
-# 5. Sort Method
+# 5. Array: Sort Method
 ```js
 const num = [1, 5, 15, 3, 4, 9, 2, 7];
 const sortNum = num.sort();
@@ -383,24 +407,24 @@ const sortNumber = num.sort((a, b) => {
 console.log(sortNumber); 
 ```
 
-## Problem Solving
+## Sort: Problem Solving
 
-## Sort by name
+## Sort: Sort by name
 ```js
 const sortName = characters.sort((a, b) => a.name.localeCompare(b.name));
 console.log(sortName);
 ```
-## Sort by mass
+## Sort: Sort by mass
 ```js
 const sortMass = characters.sort((a, b) => a.mass - b.mass);
 console.log(sortMass);
 ```
-## Sort by height
+## Sort: Sort by height
 ```js
 const sortHeight = characters.sort((a, b) => a.height - b.height);
 console.log(sortHeight);
 ```
-## Sort by gender
+## Sort: Sort by gender
 ```js
 const sortGender = characters.sort((a, b) => a.gender.localeCompare(b.gender));
 console.log(sortGender);

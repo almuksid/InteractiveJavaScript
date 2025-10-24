@@ -148,26 +148,6 @@ console.log(fName);
 ---
 ---
 
-## Split Method
-```js
-const name = "Al Muksid";
-console.log(name.split(" "));
-```
-
-## for each function 
-```js
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-arr.forEach(function (el, ind) { //method
-  console.log(el, ind);
-});
-```
-### Desc:create for each function - Function call as a parameter - then create new prametter(el) inside function- # This function is treated as a method. 
-```js
-arr.forEach((el, ind) => console.log(el, ind)); // # el- element[arr value] # ind- index[index number]
-```
----
----
 
 # 2. Array: Filter Method
 
@@ -563,3 +543,41 @@ console.log(counter);
 ---
 ---
 
+# Destructuring Object
+```js
+let person = {
+    name : 'Al Muksid',
+    age : 25, 
+    interest : ['Programming', 'Designing'],
+    addr : {city: 'Magura', zip: 7600}
+}
+
+let {name: fullName = 'Mesion', age, interest, addr : {city, zip}} = person;
+console.log(fullName, city);
+
+console.log(`My name is ${fullName}, I am ${age} years old, I am interested in ${interest}, and I live in ${city} with ZIP code ${zip}.`)
+```
+
+---
+---
+
+## Split Method
+```js
+const name = "Al Muksid";
+console.log(name.split(" "));
+```
+
+## for each function 
+```js
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+arr.forEach(function (el, ind) { //method
+  console.log(el, ind);
+});
+```
+### Desc:create for each function - Function call as a parameter - then create new prametter(el) inside function- # This function is treated as a method. 
+```js
+arr.forEach((el, ind) => console.log(el, ind)); // # el- element[arr value] # ind- index[index number]
+```
+---
+---

@@ -452,6 +452,7 @@ console.log(result);
 
 **accumulator, currentValue, currentIndex, array**
 ```js
+// accumulator, currentValue, currentIndex, array
 const result1 = num.reduce((acc, el) =>{
     acc += el;
     return acc;
